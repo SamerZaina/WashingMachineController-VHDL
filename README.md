@@ -1,3 +1,4 @@
+
 ---
 
 # 🧺 Washing Machine Controller – VHDL FSM Project
@@ -6,24 +7,18 @@
 
 This project implements a **Finite State Machine (FSM) based Washing Machine Controller** using **VHDL**.
 
-The design simulates a programmable washing machine system that controls washing, rinsing, and spinning cycles.
-It is developed using **Intel Quartus Prime** and tested via simulation.
+The system simulates a programmable washing machine that controls washing, rinsing, and spinning cycles. It was developed and tested using **Intel Quartus Prime** and hardware simulation tools.
 
-The controller interacts with:
-
-* User program selection input
-* Start / Reset signals
-* Clock division module
-* Seven-segment display driver
+The design follows modular digital system principles and demonstrates synchronous FSM-based control logic.
 
 ---
 
 ## 🎯 Project Objectives
 
-* Design a **Finite State Machine (FSM)** in VHDL
+* Design and implement a Finite State Machine (FSM) in VHDL
+* Model washing machine operational cycles
 * Implement modular hardware components
-* Display system states on a seven-segment display
-* Simulate washing machine cycle transitions
+* Display system states using a seven-segment display
 * Apply synchronous digital system design principles
 
 ---
@@ -32,7 +27,7 @@ The controller interacts with:
 
 The project consists of multiple VHDL modules:
 
-### 1️⃣ `WashingMachineController.vhd`
+### 1️⃣ WashingMachineController.vhd
 
 Main FSM controller:
 
@@ -42,54 +37,54 @@ Main FSM controller:
 
 ---
 
-### 2️⃣ `Clk_Divider.vhd`
+### 2️⃣ Clk_Divider.vhd
 
 Clock divider module:
 
 * Reduces system clock frequency
-* Generates slower clock for timing control
+* Generates slower clock signals for timing control
 
 ---
 
-### 3️⃣ `seven_seg_decoder.vhd`
+### 3️⃣ seven_seg_decoder.vhd
 
 Seven-segment decoder:
 
-* Converts binary input into segment signals
+* Converts binary input into segment control signals
 * Displays numbers and characters
 
 ---
 
-### 4️⃣ `seven_seg_decoder_tb.vhd`
+### 4️⃣ seven_seg_decoder_tb.vhd
 
-Testbench for decoder:
+Testbench module:
 
-* Verifies correct segment outputs
-* Used for simulation validation
+* Verifies seven-segment decoder functionality
+* Used for simulation and validation
 
 ---
 
-### 5️⃣ `showword.vhd`
+### 5️⃣ showword.vhd
 
 Display control module:
 
-* Drives seven-segment display output
-* Manages displayed words based on state
+* Drives seven-segment display outputs
+* Manages displayed values based on FSM state
 
 ---
 
 ## ⚙️ Inputs & Outputs
 
-### Inputs:
+### Inputs
 
 * `clk` – System clock
 * `reset` – System reset
 * `start` – Start washing cycle
-* `userProg` – 5-bit program selector
+* `userProg` – 5-bit program selection input
 
-### Outputs:
+### Outputs
 
-* `sevseg_data` – 7-segment display segments
+* `sevseg_data` – Seven-segment display data
 * `sevseg_driver` – Display enable lines
 * `state` – Current FSM state
 
@@ -109,7 +104,9 @@ State transitions depend on:
 * Start signal
 * Reset signal
 * Program selection
-* Cycle completion timing
+* Cycle timing completion
+
+The FSM ensures proper sequential execution of washing machine stages.
 
 ---
 
@@ -118,7 +115,7 @@ State transitions depend on:
 * VHDL
 * Intel Quartus Prime
 * ModelSim / NativeLink Simulation
-* FPGA Digital Design Principles
+* Digital Logic Design Concepts
 
 ---
 
@@ -142,11 +139,11 @@ FinalProject/
 
 ## ▶️ How to Run
 
-1. Open **Quartus Prime**
+1. Open Intel Quartus Prime
 2. Open `VHDL_FINALPROJECT.qpf`
 3. Compile the project
-4. Run simulation using ModelSim / NativeLink
-5. Observe FSM state transitions and display outputs
+4. Run simulation using ModelSim or NativeLink
+5. Observe FSM transitions and seven-segment output
 
 ---
 
@@ -158,8 +155,9 @@ It demonstrates:
 
 * FSM modeling
 * Modular VHDL design
+* Synchronous digital logic
 * Hardware abstraction
-* Synchronous digital design
+* Simulation and verification techniques
 
 ---
 
@@ -169,3 +167,4 @@ It demonstrates:
 Embedded Systems & Digital Design
 
 ---
+
