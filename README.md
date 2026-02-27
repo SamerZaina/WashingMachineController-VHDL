@@ -2,7 +2,7 @@
 ---
 
 # 🧺 Washing Machine Controller – VHDL FSM Project
-
+![Full System View](Images/FullView.png)
 ## 📌 Project Overview
 
 This project implements a **Finite State Machine (FSM) based Washing Machine Controller** using **VHDL**.
